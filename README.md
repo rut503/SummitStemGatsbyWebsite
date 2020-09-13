@@ -35,10 +35,17 @@
 
 ## TODO: 5
 1. Create Contact Me Form
-1. Style Contact Me
-2. Find A Solution To Send Emails
-3. Implement Email Sending Solution
-4. Test Contact Me Form
+2. Style Contact Me
+3. Find A Solution To Send Emails
+4. Implement Email Sending Solution
+5. Test Contact Me Form
+
+## TODO: 6
+1. Create Favicon
+2. Create Blog Page
+3. Style Blog Page
+4. Create Automated Blog System
+5. Test Automated Blog System
 
 
 ## 🧐 What's inside?
