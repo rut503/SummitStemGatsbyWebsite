@@ -1,5 +1,21 @@
 import React from "react"
 
-export default function Home() {
-  return <div>Hello world!</div>
+import Layout from "../components/layout";
+
+import Home from "../components/home"
+import Services from "../components/Services"
+import AboutMe from "../components/aboutMe"
+import ContactMe from "../components/contactMe"
+
+const MainPage = () => {
+	return (
+		<Layout>
+			<Home />
+			<Services />
+			<AboutMe />
+			<ContactMe />
+		</Layout>
+	);
 }
+
+export default MainPage
