@@ -1,35 +1,127 @@
 @import "../styles/theme.scss";
 
 .container{
-	// background-color: burlywood;
-	
-	.bg{
-		position: relative;
-		background-image: url(../../static/images/otherImages/joshua-earle--87JyMb9ZfU-unsplash.jpg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 90vh;
-	}
+	// background-color: burlywood;	
+}
+
+.bg{
+	position: relative;
+	background-image: url(../../static/images/otherImages/joshua-earle--87JyMb9ZfU-unsplash.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 90vh;
 }
 
 .heading{
 	position: absolute;
-	font-family: 'Rubik', 'Times New Roman', Times, serif;
-	font-weight: 700;
-	// font-size: 2.5rem;
-	color: #333;
-
+	margin: -65vh auto 0;
+	padding: 20px;
 	left: 0;
 	right: 0;
-	margin: -65vh auto 0;
-	// width: 900px;
+
+	font-family: 'Rubik', 'Times New Roman', Times, serif;
+	font-weight: 700;
+	font-size: 1rem;
+	color: #333;
 
 	background-color: transparent;
 	border: none;
 	border-radius: 10px;
 	box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.2);
-	padding: 20px;
+
+	@include s-and-up {
+		width: 70vw;
+	}
+	@include m-and-up {
+		font-size: 1.5rem;
+	}
+	@include xl-and-up {
+		width: 900px
+	}
+}
+
+.philosophy{
+	@include CardShadow;
+	margin: 50px auto;
+	width: 95vw;
+	padding: 50px 20px;
+	margin: 100px auto;
+	
+	@include s-and-up {
+		width: 90vw;
+		padding: 60px 40px;
+	}
+	@include m-and-up {
+		width: 80vw;
+		padding: 60px 50px;
+	}
+	@include l-and-up {
+		padding: 60px 60px;
+	}
+	@include xl-and-up {
+		width: 1000px;
+		padding: 60px 80px;
+	}
+
+	h1{
+		@include HeadingFonts;
+		margin-bottom: 40px;
+	}
+	h4{
+		@include TextFonts;
+		font-size: 1.2rem;
+		margin-bottom: 20px;
+
+		@include s-and-up {
+			// font-size: 1.2rem;
+			margin-bottom: 30px;
+		}
+
+		@include m-and-up {
+			font-size: 1.4rem;
+			margin-bottom: 40px;
+		}
+	}
+	button{
+		@include CustomButton;
+		margin: 40px auto 30px;
+		padding: 0;
+
+		@include s-and-up {
+			margin: 40px 0 0 0;
+		}
+
+		.icon{
+			float: left;
+			border-radius: 7px 0 0 7px;
+			background-color: black;
+			font-size: 1rem;
+			padding: 32px 25px;
+
+			@include s-and-up {
+				padding: 20px 25px;
+				font-size: 1.25rem;
+			}
+		}
+		
+		.text{
+			float: none;
+
+			@include s-and-up {
+				float: right;
+			}
+		}
+		
+		p{
+			padding: 20px 0;
+
+			@include s-and-up {
+				padding: 22.7px 34px;
+			}
+		}
+	}
+
 }
 
 // .philosophy{

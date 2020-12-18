@@ -1,3 +1,45 @@
+@import "../styles/theme.scss";
+
 .container{
-	background-color: chocolate;
+	@include CardShadow;
+	// background-color: rgb(161, 161, 161);
+	border-radius: 20px 20px 0 0;
+	padding: 20px 0;
+	margin-top: 50px;
+
+	p{
+		@include TextFonts;
+		color: $HeadingColor;
+		font-size: 0.8rem;
+		margin: 10px;
+
+		@include s-and-up {
+			font-size: 0.9rem;
+		}
+		@include m-and-up {
+			font-size: 1rem;
+		}
+	}
+
+	div{
+		display: flex;
+		justify-content: space-evenly;
+		padding: 10px 0;
+		
+		@include s-and-up{
+			width: 300px;
+			margin: auto;
+		}
+		
+		button{
+			@include CustomButton;
+			box-shadow: 0px 5px 10px rgba(211, 31, 57, 0.64);
+			padding: 0;
+			width: 40px;
+			height: 40px;
+			font-size: 1.5rem;
+	
+		}
+	}
+
 }

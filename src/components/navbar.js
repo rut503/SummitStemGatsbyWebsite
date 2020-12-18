@@ -29,7 +29,7 @@ const NavBar = () => {
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="mr-auto"></Nav>
 				<Nav>
-					<Nav.Link>
+					{/* <Nav.Link> */}
 						{/* <button onClick={() => onLinkClick("Home")}> */}
 						<AnchorLink to="/#Top" title="Welcome to my site" className={navbarStyles.links}>
 							{/* <span className={activeLink === "Home" ? navbarStyles.active : navbarStyles.notActive}> */}
@@ -37,8 +37,8 @@ const NavBar = () => {
 							{/* </span> */}
 						</AnchorLink>
 						{/* </button> */}
-					</Nav.Link>
-					<Nav.Link>
+					{/* </Nav.Link> */}
+					{/* <Nav.Link> */}
 						{/* <button onClick={() => onLinkClick("Services")}> */}
 						<AnchorLink to="/#Services" title="Services I Offer" className={navbarStyles.links}>
 							{/* <span className={activeLink === "Services" ? navbarStyles.active : navbarStyles.notActive}> */}
@@ -46,8 +46,8 @@ const NavBar = () => {
 							{/* </span> */}
 						</AnchorLink>
 						{/* </button> */}
-					</Nav.Link>
-					<Nav.Link>
+					{/* </Nav.Link> */}
+					{/* <Nav.Link> */}
 						{/* <button onClick={() => onLinkClick("AboutMe")}> */}
 						<AnchorLink to="/#AboutMe" title="About myself" className={navbarStyles.links}>
 							{/* <span className={activeLink === "AboutMe" ? navbarStyles.active : navbarStyles.notActive} > */}
@@ -55,8 +55,8 @@ const NavBar = () => {
 							{/* </span> */}
 						</AnchorLink>
 						{/* </button> */}
-					</Nav.Link>
-					<Nav.Link>
+					{/* </Nav.Link> */}
+					{/* <Nav.Link> */}
 						{/* <button onClick={() => onLinkClick("ContactMe")}> */}
 						<AnchorLink to="/#ContactMe" title="Come talk with me" className={navbarStyles.links}>
 							{/* <span className={activeLink === "ContactMe" ? navbarStyles.active : navbarStyles.notActive}> */}
@@ -64,12 +64,12 @@ const NavBar = () => {
 							{/* </span> */}
 						</AnchorLink>
 						{/* </button> */}
-					</Nav.Link>
-					<Nav.Link eventKey={2}>
+					{/* </Nav.Link> */}
+					{/* <Nav.Link eventKey={2}> */}
 						{/* <button onClick={() => onLinkClick("")}> */}
 						<Link to="/blog" activeClassName={navbarStyles.active} className={navbarStyles.links}>Blog</Link>
 						{/* </button> */}
-					</Nav.Link>
+					{/* </Nav.Link> */}
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>

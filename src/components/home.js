@@ -1,10 +1,11 @@
 import React from "react"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 
 import homeStyles from "./home.module.scss"
-import CustomHR from "../components/customHR"
+import CustomHR from "./customHR"
 
 const Home = () => {
 	return(
@@ -31,14 +32,16 @@ const Home = () => {
 					“When you follow the strange trails, they will take you who knows where” 
 					– Lord Huron, Way Out There
 				</h4>
-				<button>
-					<div className={homeStyles.icon}>
-						<FontAwesomeIcon icon={faPaperPlane}/>	
-					</div>
-					<div className={homeStyles.text}>
-						<p>Reach Your Summit Now</p>
-					</div>
-				</button>
+				<AnchorLink to="/#ContactMe" title="Come talk with me">
+					<button>
+						<div className={homeStyles.icon}>
+							<FontAwesomeIcon icon={faPaperPlane}/>	
+						</div>
+						<div className={homeStyles.text}>
+							<p>Reach Your Summit Now</p>
+						</div>
+					</button>
+				</AnchorLink>
 			</div>
 
 		</div>

@@ -99,7 +99,7 @@ $OffWhiteColor : #FAFAFA;
 	@media (min-width: 992px) { @content; }
 }
 
-@mixin el-and-up {
+@mixin xl-and-up {
 	// X-Large devices (large desktops, 1200px and up)
 	@media (min-width: 1200px) { @content; }
 }
