@@ -8,7 +8,7 @@ import CustomHR from "../components/customHR"
 
 const Home = () => {
 	return(
-		<div className={homeStyles.container}>
+		<div id="Home" className={homeStyles.container}>
 			
 			<div className={homeStyles.bg}></div>
 

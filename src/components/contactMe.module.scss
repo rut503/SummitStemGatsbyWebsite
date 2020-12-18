@@ -1,60 +1,60 @@
-@import "../styles/theme.scss";
+// @import "../styles/theme.scss";
 
-.container{
-	max-width: 1200px;
-	margin: 150px auto;
-	padding: 100px;
-	@include CardShadow;
+// .container{
+// 	max-width: 1200px;
+// 	margin: 150px auto;
+// 	padding: 100px;
+// 	@include CardShadow;
 	
-	text-align: left;
-	display: flex;
+// 	text-align: left;
+// 	display: flex;
 
-	.left{
-		flex-shrink: 1;
+// 	.left{
+// 		flex-shrink: 1;
 
-		h1{
-			@include HeadingFonts;
-			margin-bottom: 50px;
-		}
+// 		h1{
+// 			@include HeadingFonts;
+// 			margin-bottom: 50px;
+// 		}
 	
-		form{
-			@include TextFonts;
-			font-size: 1.3rem;
+// 		form{
+// 			@include TextFonts;
+// 			font-size: 1.3rem;
 	
-			.customLabel{
-				color: rgb(108, 160, 95);
-				// padding-top: 20px;
-				// position: absolute;
-			}
+// 			.customLabel{
+// 				color: rgb(108, 160, 95);
+// 				// padding-top: 20px;
+// 				// position: absolute;
+// 			}
 
-			.name, .email, .message{
-				@include TextFonts;
-				@include CustomInputs;
+// 			.name, .email, .message{
+// 				@include TextFonts;
+// 				@include CustomInputs;
 
-			}
+// 			}
 
-			.submitBtn{
-				@include CustomButton;
-			}
-		}
+// 			.submitBtn{
+// 				@include CustomButton;
+// 			}
+// 		}
 
-		// border: 1px solid black;
-	}
+// 		// border: 1px solid black;
+// 	}
 
-	.right{
-		flex-grow: 1;
+// 	.right{
+// 		flex-grow: 1;
 
-		// position: relative;
-		background-image: url(../../static/images/undrawImages/undraw_Newsletter_re_wrob.svg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: contain;
+// 		// position: relative;
+// 		background-image: url(../../static/images/undrawImages/undraw_Newsletter_re_wrob.svg);
+// 		background-position: center;
+// 		background-repeat: no-repeat;
+// 		background-size: contain;
 
-		height: 10vh;
-		height: auto;
+// 		height: 10vh;
+// 		height: auto;
 		
-		// border: 1px solid black;
-	}
+// 		// border: 1px solid black;
+// 	}
 	
-}
+// }
 

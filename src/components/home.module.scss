@@ -17,13 +17,13 @@
 	position: absolute;
 	font-family: 'Rubik', 'Times New Roman', Times, serif;
 	font-weight: 700;
-	font-size: 2.5rem;
+	// font-size: 2.5rem;
 	color: #333;
 
 	left: 0;
 	right: 0;
 	margin: -65vh auto 0;
-	width: 900px;
+	// width: 900px;
 
 	background-color: transparent;
 	border: none;
@@ -32,41 +32,41 @@
 	padding: 20px;
 }
 
-.philosophy{
-	@include CardShadow;
-	max-width: 1000px;
-	margin: 150px auto;
-	padding: 70px 130px 105px;
+// .philosophy{
+// 	@include CardShadow;
+// 	max-width: 1000px;
+// 	margin: 150px auto;
+// 	padding: 70px 130px 105px;
 
-	h1{
-		@include HeadingFonts;
-		margin-bottom: 40px;
-	}
-	h4{
-		@include TextFonts;
-		font-size: 1.4rem;
-		margin-bottom: 40px;
-	}
-	button{
-		@include CustomButton;
+// 	h1{
+// 		@include HeadingFonts;
+// 		margin-bottom: 40px;
+// 	}
+// 	h4{
+// 		@include TextFonts;
+// 		font-size: 1.4rem;
+// 		margin-bottom: 40px;
+// 	}
+// 	button{
+// 		@include CustomButton;
 
-		margin-top: 40px;
-		padding: 0;
+// 		margin-top: 40px;
+// 		padding: 0;
 
-		.icon{
-			float: left;
-			border-radius: 7px 0 0 7px;
-			background-color: black;
-			padding: 20px 25px;
-			font-size: 1.25rem;
-		}
+// 		.icon{
+// 			float: left;
+// 			border-radius: 7px 0 0 7px;
+// 			background-color: black;
+// 			padding: 20px 25px;
+// 			font-size: 1.25rem;
+// 		}
 		
-		.text{
-			float: right;
-		}
+// 		.text{
+// 			float: right;
+// 		}
 		
-		p{
-			padding: 22.7px 34px;
-		}
-	}
-}
+// 		p{
+// 			padding: 22.7px 34px;
+// 		}
+// 	}
+// }
