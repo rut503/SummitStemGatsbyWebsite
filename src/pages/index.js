@@ -1,20 +1,38 @@
 import React from "react"
 
-import Layout from "../components/layout";
+import NavBar from "../components/navbar"
+import Footer from "../components/footer"
+import MoveToTopBtn from "../components/moveToTopBtn"
 
 import Home from "../components/home"
 import Services from "../components/Services"
 import AboutMe from "../components/aboutMe"
 import ContactMe from "../components/contactMe"
 
-const MainPage = () => {
+import CustomHR from "../components/customHR"
+
+const MainPage = ({ location }) => {
+
 	return (
-		<Layout>
+		<>
+			<MoveToTopBtn moveTo="Top"/>
+
+			<NavBar />
+
 			<Home />
+
+			<CustomHR styles={{position: "relative", marginBottom: 30}}/>
+
 			<Services />
+			
+			<CustomHR styles={{marginBottom: 30}}/>
+
 			<AboutMe />
+			
 			<ContactMe />
-		</Layout>
+
+			<Footer />
+		</>
 	);
 }
 

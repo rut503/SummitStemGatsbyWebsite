@@ -1,3 +1,84 @@
+@import "../styles/theme.scss";
+
 .container{
 	background-color: rgb(245, 245, 141);
+
+	margin-bottom: 150px;
+
+	h1{
+		@include HeadingFonts;
+		margin-bottom: 50px;
+	}
+
+	h4{
+		@include TextFonts;
+		font-size: 1.3rem;
+		margin: 0 auto 50px;
+		max-width: 630px;
+
+		span{
+			color: $AccentColor;	
+		}
+	}
+}
+
+.serviceCarousel{
+	display: flex;
+}
+
+.serviceCard{		
+	@include CardShadow;
+	display: flex;
+	flex-direction: column;
+
+	width: 400px;
+	height: 575px;
+	margin: 10px auto;
+	padding: 20px;
+
+	h3{
+		font-family: 'Rubik', 'Times New Roman', Times, serif;
+		font-weight: 500;
+		font-size: 1.4rem;
+		color: $HeadingColor;
+		margin: 10px auto;
+
+		background-color: rgb(176, 220, 221);
+	}
+
+	ul{
+		color: $TextColor;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(214, 221, 176);
+	}
+
+	h6{
+		color: $TextColor;
+		margin: auto;
+
+		background-color: rgb(177, 183, 236);
+	}
+}
+
+.highSchoolSVG, .collegeSVG, .graduateSVG, .educatorsSVG{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 170px;
+
+	background-color: rgb(214, 154, 154);
+}
+.highSchoolSVG{
+	background-image: url(../../static/images/undrawImages/highSchoolStudent.svg);
+}
+.collegeSVG{
+	background-image: url(../../static/images/undrawImages/college.svg);
+}
+.graduateSVG{
+	background-image: url(../../static/images/undrawImages/graduates.svg);
+}
+.educatorsSVG{
+	background-image: url(../../static/images/undrawImages/educator.svg);
 }

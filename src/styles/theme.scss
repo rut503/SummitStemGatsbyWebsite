@@ -1,0 +1,76 @@
+$AccentColor : #D31F39;
+$AccentGradient : linear-gradient(93.94deg, #CC1B35 15.4%, #E11835 91.33%);
+$HeadingColor : #606060;
+$TextColor : #909090;
+$OffWhiteColor : #FAFAFA;
+$OffWhiteColor : #FAFAFA;
+
+
+@mixin HeadingFonts {
+	font-family: 'Rubik', 'Times New Roman', Times, serif;
+	font-weight: 700;
+	font-size: 3.2rem;
+	letter-spacing: -1px;
+	color: $HeadingColor;
+}
+
+@mixin TextFonts {
+	font-family: 'Roboto', 'Times New Roman', Times, serif;
+	font-weight: 500;
+	font-size: 1rem;
+	color: $TextColor;
+}
+
+@mixin CardShadow {
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.1);
+}
+
+@mixin CustomButton {
+	color: $OffWhiteColor;
+	background: $AccentGradient;
+	border: none;
+	box-shadow: 0px 13px 27px rgba(211, 31, 57, 0.64);
+	border-radius: 7px;
+	transition: 100ms;
+	outline: none;
+	padding: 18px 45px;
+	font-family: 'Rubik', 'Times New Roman', Times, serif;
+	font-weight: 500;
+	font-size: 1rem;
+
+	&:focus{
+		outline: none;
+	}
+
+	&:hover{
+		box-shadow: 0px 13px 27px rgba(211, 31, 57, 0.4);
+	}
+
+	&:active{
+		box-shadow: none;
+	}
+}
+
+// @mixin CustomLabels {
+	
+// }
+
+@mixin CustomInputs {
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 3px solid $TextColor;
+	width: 100%;
+	max-width: 100%;
+
+	&:hover{
+		background-color: $OffWhiteColor;
+	}
+	
+	&:focus{
+		background-color: darken($color: $OffWhiteColor, $amount: 3);
+		outline: none;
+		// box-shadow: 0 0 4pt 1pt $AccentColor;
+	}
+}

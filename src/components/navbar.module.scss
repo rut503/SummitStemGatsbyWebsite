@@ -1,3 +1,86 @@
+@import "../styles/theme.scss";
+
 .container{
-	background-color: cornflowerblue;
+	position: relative;
+	z-index: 1000;
 }
+
+.navbar{
+	border: 1px solid black;
+
+	// position: fixed;	
+	display: flex;
+	top: 20px;
+	right: 0;
+    left: 0;
+    margin-right: auto;
+	margin-left: auto;
+	max-width: 1200px;
+	width: 1200px;
+	min-height: 5rem;
+
+	.logoDiv{
+		display: flex;
+
+		div{
+			background-image: url(../../static/images/otherImages/SummitSTEMLogo.png);
+			width: 50%;
+			height: 100%;
+	
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			border-right: 2px solid #606060;
+		}
+
+		p{
+			text-align: left;
+			padding: 50px 20px 0 10px;
+			margin: 0;
+
+			font-family: 'Rubik','Times New Roman', Times, serif;
+			font-weight: 700;
+			font-size: 1rem;
+			color: #505050;
+		}
+	}
+
+	ul{
+		font-family: 'Rubik','Times New Roman', Times, serif;
+		font-weight: 700;
+		font-size: 1rem;
+		margin: auto 0 auto auto;
+		display: flex;
+		
+		li{ 
+			margin-left: 40px;
+			
+			///////////// Work in progress /////////////////////
+			// button{
+			// 	font: inherit;
+			// 	background: none;
+			// 	border: none;	
+			// }
+
+			a{
+				color: $AccentColor;
+				&:hover{
+					color: $HeadingColor;
+				}
+			}
+		}
+	}
+}
+
+///////////// Work in progress /////////////////////
+// .notActive{
+// 	color: $AccentColor;
+// }
+
+// .notActive:hover{
+// 	color: $HeadingColor;
+// }
+
+// .active{
+// 	color: $HeadingColor;
+// }

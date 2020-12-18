@@ -47,6 +47,15 @@
 4. Create Automated Blog System
 5. Test Automated Blog System
 
+## TODO: Changes Requested 
+1. Change title page background picture to one of these and potentially change color scheme?
+    https://unsplash.com/photos/m0wptz8vYpw
+    https://unsplash.com/photos/twukN12EN7c
+    https://unsplash.com/photos/FZqISnUVsL0
+2. Change logo to the photo attached
+3. Next to the logo, add: Educational Consulting & Success Coaching (See PP slides attached as example) I think I like the layout of the first one the best and maybe white font?
+4. Add Testimonials and Blog pages (Content to come later)
+
 
 ## 🧐 What's inside?
 
