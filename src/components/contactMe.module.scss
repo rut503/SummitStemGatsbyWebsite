@@ -1,59 +1,85 @@
 @import "../styles/theme.scss";
 
 .container{
-	max-width: 1200px;
-	margin: 150px auto;
-	padding: 100px;
 	@include CardShadow;
-	
 	text-align: left;
-	display: flex;
+	margin: 50px auto;
+	padding: 50px 0 70px;
+
+	@include s-and-up{
+		margin: 50px;
+	}
+	@include m-and-up{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 50px 25px 70px;
+		margin: 50px 25px;
+	}
+	@include l-and-up {
+		margin: 50px;
+	}
+	@include xl-and-up {
+		width: 1100px;
+		margin: 50px auto;
+	}
+	
+	h1{
+		@include HeadingFonts;
+		text-align: center;
+		margin-bottom: 50px;
+		flex-basis: 100%;
+	}
 
 	.left{
 		flex-shrink: 1;
 
-		h1{
-			@include HeadingFonts;
-			margin-bottom: 50px;
-		}
-	
 		form{
 			@include TextFonts;
 			font-size: 1.3rem;
+			width: 95vw;
+			margin: auto;
+
+			@include s-and-up {
+				width: 25rem;
+			}
 	
 			.customLabel{
-				color: rgb(108, 160, 95);
-				// padding-top: 20px;
-				// position: absolute;
+				color: $AccentColor;
 			}
 
 			.name, .email, .message{
 				@include TextFonts;
 				@include CustomInputs;
 
+				font-size: 1.2rem;
+				width: 95vw;
+
+				@include s-and-up {
+					width: 25rem;
+				}
 			}
 
 			.submitBtn{
 				@include CustomButton;
+				display: block;
+				margin: auto;
 			}
 		}
-
-		// border: 1px solid black;
 	}
 
 	.right{
 		flex-grow: 1;
 
-		// position: relative;
 		background-image: url(../../static/images/undrawImages/undraw_Newsletter_re_wrob.svg);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
+		display: none;
 
-		height: 10vh;
-		height: auto;
-		
-		// border: 1px solid black;
+		@include m-and-up {
+			display: block;
+		}
+
 	}
 	
 }

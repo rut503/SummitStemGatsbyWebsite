@@ -5,70 +5,46 @@
 	z-index: 1000;
 }
 
-.navbar{
-	border: 1px solid black;
-
-	// position: fixed;	
+.logoDiv{
 	display: flex;
-	top: 20px;
-	right: 0;
-    left: 0;
-    margin-right: auto;
-	margin-left: auto;
-	max-width: 1200px;
-	width: 1200px;
-	min-height: 5rem;
-
-	.logoDiv{
-		display: flex;
-
-		div{
-			background-image: url(../../static/images/otherImages/SummitSTEMLogo.png);
-			width: 50%;
-			height: 100%;
 	
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: contain;
+	p { 
+		text-align: left;
+		padding: 10px 0 0 5px;
+		margin: 0;
+		width: 160px;
+		white-space: initial;
+		overflow: hidden;
+		font-family: 'Rubik','Times New Roman', Times, serif;
+		font-weight: 700;
+		font-size: 0.8rem;
+		color: #505050;
+		display: none; 
+	}
+
+	@media (min-width: 360px) {
+		img{
 			border-right: 2px solid #606060;
 		}
 
-		p{
-			text-align: left;
-			padding: 50px 20px 0 10px;
-			margin: 0;
-
-			font-family: 'Rubik','Times New Roman', Times, serif;
-			font-weight: 700;
-			font-size: 1rem;
-			color: #505050;
+		p { 
+			display: inline;
 		}
 	}
+}
 
-	ul{
-		font-family: 'Rubik','Times New Roman', Times, serif;
-		font-weight: 700;
-		font-size: 1rem;
-		margin: auto 0 auto auto;
-		display: flex;
-		
-		li{ 
-			margin-left: 40px;
-			
-			///////////// Work in progress /////////////////////
-			// button{
-			// 	font: inherit;
-			// 	background: none;
-			// 	border: none;	
-			// }
+.links{
+	font-family: 'Rubik','Times New Roman', Times, serif;
+	font-weight: 700;
+	font-size: 1rem;
+	margin: auto 0 auto 20px;
 
-			a{
-				color: $AccentColor;
-				&:hover{
-					color: $HeadingColor;
-				}
-			}
-		}
+	overflow: hidden;
+	white-space: nowrap;
+	
+	color: $AccentColor !important;
+	&:hover{
+		color: $HeadingColor !important;
 	}
 }
 

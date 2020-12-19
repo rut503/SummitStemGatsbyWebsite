@@ -26,10 +26,11 @@ const ContactMe = () => {
 	return(
 		<div id="ContactMe" className={contactMeStyles.container}>
 			
+			<h1>Contact Me</h1>
+			
 			<div className={contactMeStyles.left}>
-				<h1>Contact Me</h1>
 				
-				{/* <form onSubmit={}>
+				{/* <form onSubmit={handleSubmit}>
 					<label for="name" >Name</label><br/>
 					<input id="name" type="text" placeholder="Name" autocomplete="name" required className={contactMeStyles.name}/>
 					<br/>
