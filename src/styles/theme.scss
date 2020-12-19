@@ -66,17 +66,17 @@ $OffWhiteColor : #FAFAFA;
 	margin-bottom: 30px;
 	border: none;
 	border-bottom: 3px solid $TextColor;
-	width: 100%;
-	max-width: 100%;
+	background-color: $OffWhiteColor;
 
 	&:hover{
-		background-color: $OffWhiteColor;
+		background-color: darken($color: $OffWhiteColor, $amount: 2);
 	}
 	
 	&:focus{
-		background-color: darken($color: $OffWhiteColor, $amount: 3);
 		outline: none;
-		// box-shadow: 0 0 4pt 1pt $AccentColor;
+		background-color: darken($color: $OffWhiteColor, $amount: 4);
+		border-bottom: 3px solid $HeadingColor;
+		color: $HeadingColor;
 	}
 }
 
