@@ -45,8 +45,9 @@ const ContactMe = () => {
 
 				<form onSubmit={handleSubmit}>
 					<label>
-					<span className={contactMeStyles.customLabel}>Name</span>
-						<br/>
+						<span className={contactMeStyles.customLabel}>
+							Name
+						</span>
 						<input
 							type="text"
 							name="name"
@@ -56,10 +57,11 @@ const ContactMe = () => {
 							onChange={handleInputChange}
 						/>
 					</label>
-					<br/>
+
 					<label>
-					<span className={contactMeStyles.customLabel}>Email</span>
-						<br/>
+						<span className={contactMeStyles.customLabel}>
+							Email
+						</span>
 						<input
 							type="email"
 							name="email"
@@ -69,23 +71,25 @@ const ContactMe = () => {
 							onChange={handleInputChange}
 						/>
 					</label>
-					<br/>
+
 					<label>
-						<span className={contactMeStyles.customLabel}>Message</span>
-						<br/>
+						<span className={contactMeStyles.customLabel}>
+							Message
+						</span>
 						<textarea
 							type="text"
 							name="message"
 							rows={5}
-							// cols={16}
 							required
 							className={contactMeStyles.message}
 							value={message}
 							onChange={handleInputChange}
 						/>
 					</label>
-					<br/>
-					<button className={contactMeStyles.submitBtn} type="submit">Send Message</button>
+
+					<button className={contactMeStyles.submitBtn} type="submit">
+						Send Message
+					</button>
 				</form>
 			</div>
 

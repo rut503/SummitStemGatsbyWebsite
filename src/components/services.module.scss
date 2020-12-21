@@ -1,74 +1,91 @@
 @import "../styles/theme.scss";
 
 .container{
-	background-color: rgb(245, 245, 141);
+	margin: 25px auto 75px;
 
-	margin-bottom: 150px;
+	@include s-and-up{
+		margin: 50px auto 100px;
+	}
+	@include m-and-up{
+		margin: 100px auto;
+	}
 
 	h1{
 		@include HeadingFonts;
-		margin-bottom: 50px;
+		margin-bottom: 25px;
+
+		@include s-and-up{
+			margin-bottom: 50px;
+		}
 	}
 
 	h4{
-		@include TextFonts;
-		font-size: 1.3rem;
-		margin: 0 auto 50px;
+		@include LargeTextFonts;
+		margin: 0 auto 25px;
 		max-width: 630px;
 
 		span{
-			color: $AccentColor;	
+			color: $AccentColor;
 		}
 	}
 }
 
-.serviceCarousel{
-	// display: flex;
+.serviceCardBox{
+	margin-top: 25px;
+	@include s-and-up{
+		margin-top: 50px;
+	}
 }
 
-.serviceCard{		
+.serviceCard{
 	@include CardShadow;
-	display: flex;
-	flex-direction: column;
+	height: 100%;
+	padding: 10px 0;
 
-	// width: 400px;
-	height: 575px;
-	margin: 10px auto;
-	padding: 20px;
-
-	h3{
-		font-family: 'Rubik', 'Times New Roman', Times, serif;
-		font-weight: 500;
-		font-size: 1.4rem;
-		color: $HeadingColor;
-		margin: 10px auto;
-
-		background-color: rgb(176, 220, 221);
-	}
-
-	ul{
-		color: $TextColor;
-		margin: auto;
-		width: 100%;
+	.serviceCardContent{
+		display: flex;
+		flex-direction: column;
 		height: 100%;
-		background-color: rgb(214, 221, 176);
+
+		h3, ul, h6, .highSchoolSVG, .collegeSVG, .graduateSVG, .educatorsSVG{
+			margin: auto;
+			justify-content: space-between;
+		}
+
+		h3{
+			@include SubHeadingFonts;
+			margin: 5px;
+		}
+
+		ul{
+			@include liFonts;
+			li{
+				margin: 5px;
+			}
+		}
+	
+		h6{
+			@include liFonts;
+			margin: 5px;
+		}
 	}
 
-	h6{
-		color: $TextColor;
-		margin: auto;
-
-		background-color: rgb(177, 183, 236);
-	}
 }
 
 .highSchoolSVG, .collegeSVG, .graduateSVG, .educatorsSVG{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	height: 170px;
+	min-height: 75px;
+	width: 65vw;
 
-	background-color: rgb(214, 154, 154);
+	@include s-and-up{
+		min-height: 100px;
+		width: 350px;
+	}
+	@include m-and-up{
+		min-height: 125px;
+	}
 }
 .highSchoolSVG{
 	background-image: url(../../static/images/undrawImages/highSchoolStudent.svg);

@@ -32,3 +32,42 @@ textarea {
 	max-height:25vh;
 }
 
+.carousel-inner{
+	overflow: visible;
+	margin: auto;
+	height: 475px;
+	width: 75vw;
+
+	@include xs-and-up{
+		height: 500px;
+	}
+	@include s-and-up{
+		width: 400px;
+	}
+}
+
+.carousel-control-next, .carousel-control-prev{
+	filter : invert(50%) sepia(100%) saturate(100) brightness(85%);
+	opacity: 0.9;
+}
+
+.carousel-indicators{
+	bottom: -50px;
+
+	@include s-and-up{
+		bottom: -75px;
+	}
+}
+
+.carousel-indicators .active{
+	filter : invert(50%) sepia(100%) saturate(100) brightness(85%);
+}
+
+.carousel-indicators li{
+	filter: brightness(36%);
+	opacity: 1;
+	width: 13px;
+	height: 13px;
+	border: none;
+	border-radius: 10px;
+}

@@ -8,22 +8,80 @@ $OffWhiteColor : #FAFAFA;
 @mixin HeadingFonts {
 	font-family: 'Rubik', 'Times New Roman', Times, serif;
 	font-weight: 700;
-	font-size: 2rem;
+	font-size: 24px;
 	letter-spacing: -1px;
 	color: $HeadingColor;
 
-	// font-family: 'Rubik', 'Times New Roman', Times, serif;
-	// font-weight: 700;
-	// font-size: 3.2rem;
-	// letter-spacing: -1px;
-	// color: $HeadingColor;
+	@include xs-and-up{
+		font-size: 32px;
+	}
+	@include s-and-up{
+		font-size: 40px;
+	}
+	@include m-and-up{
+		font-size: 48px;
+	}
 }
 
-@mixin TextFonts {
+@mixin SubHeadingFonts {
 	font-family: 'Roboto', 'Times New Roman', Times, serif;
 	font-weight: 500;
-	font-size: 1rem;
+	font-size: 20px;
+	color: $HeadingColor;
+
+	@include xs-and-up{
+		font-size: 24px;
+	}
+}
+
+@mixin liFonts {
+	font-family: 'Roboto', 'Times New Roman', Times, serif;
+	font-weight: 500;
+	font-size: 12px;
 	color: $TextColor;
+
+	@include xs-and-up{
+		font-size: 16px;
+	}
+}
+
+@mixin LargeTextFonts {
+	font-family: 'Roboto', 'Times New Roman', Times, serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: $TextColor;
+
+	@include s-and-up{
+		font-size: 20px;
+	}
+	@include m-and-up{
+		font-size: 24px;
+	}
+}
+
+@mixin MediumTextFonts {
+	font-family: 'Roboto', 'Times New Roman', Times, serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: $TextColor;
+
+	@include s-and-up{
+		font-size: 20px;
+	}
+	@include m-and-up{
+		font-size: 24px;
+	}
+}
+
+@mixin SmallTextFonts {
+	font-family: 'Roboto', 'Times New Roman', Times, serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: $TextColor;
+
+	@include m-and-up{
+		font-size: 20px;
+	}
 }
 
 @mixin CardShadow {
@@ -36,56 +94,49 @@ $OffWhiteColor : #FAFAFA;
 	color: $OffWhiteColor;
 	background: $AccentGradient;
 	border: none;
-	box-shadow: 0px 13px 27px rgba(211, 31, 57, 0.64);
+	box-shadow: 0 10px 20px rgba(211, 31, 57, 0.64);
 	border-radius: 7px;
 	transition: 100ms;
 	outline: none;
-	padding: 18px 45px;
 	font-family: 'Rubik', 'Times New Roman', Times, serif;
 	font-weight: 500;
-	font-size: 1rem;
+	font-size: 16px;
 
-	&:focus{
-		outline: none;
-	}
+	&:focus{ outline: none; }
 
-	&:hover{
-		box-shadow: 0px 13px 27px rgba(211, 31, 57, 0.4);
-	}
+	&:hover{ box-shadow: 0 5px 10px rgba(211, 31, 57, 0.64); }
 
-	&:active{
-		box-shadow: none;
-	}
+	&:active{ box-shadow: none; }
 }
 
-// @mixin CustomLabels {
-	
-// }
-
 @mixin CustomInputs {
-	margin-bottom: 30px;
+	padding: 5px;
 	border: none;
+	border-radius: 10px;
 	border-bottom: 3px solid $TextColor;
-	background-color: $OffWhiteColor;
+	background-color: darken($color: $OffWhiteColor, $amount: 2);
 
-	&:hover{
-		background-color: darken($color: $OffWhiteColor, $amount: 2);
-	}
+	&:hover{ background-color: darken($color: $OffWhiteColor, $amount: 4); }
 	
 	&:focus{
 		outline: none;
-		background-color: darken($color: $OffWhiteColor, $amount: 4);
+		background-color: darken($color: $OffWhiteColor, $amount: 6);
 		border-bottom: 3px solid $HeadingColor;
 		color: $HeadingColor;
 	}
 }
 
-// @include s-and-up {
+// @include xs-and-up {
 // 	// blah....
 // }
 
+@mixin xs-and-up {
+	// Extra Small devices (thin phones, 319px and up)
+	@media (min-width: 400px) { @content; }
+}
+
 @mixin s-and-up {
-	// Small devices (landscape phones, 576px and up)
+	// Small devices (phones, 576px and up)
 	@media (min-width: 576px) { @content; }
 }
 

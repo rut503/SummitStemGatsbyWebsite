@@ -10,16 +10,21 @@
 	
 	p { 
 		text-align: left;
-		padding: 10px 0 0 5px;
+		padding: 10px 0 0 10px;
 		margin: 0;
-		width: 160px;
+		width: 165px;
 		white-space: initial;
 		overflow: hidden;
 		font-family: 'Rubik','Times New Roman', Times, serif;
 		font-weight: 700;
-		font-size: 0.8rem;
+		font-size: 13px;
 		color: #505050;
-		display: none; 
+		display: none;
+
+		@include xs-and-up{
+			width: 200px;
+			font-size: 16px;
+		}
 	}
 
 	@media (min-width: 360px) {
@@ -36,15 +41,20 @@
 .links{
 	font-family: 'Rubik','Times New Roman', Times, serif;
 	font-weight: 700;
-	font-size: 1rem;
-	margin: auto 0 auto 20px;
+	font-size: 16px;
+	margin: 5px 0 5px 25px;
 
-	overflow: hidden;
-	white-space: nowrap;
+	// overflow: hidden;
+	// white-space: nowrap;
 	
 	color: $AccentColor !important;
 	&:hover{
 		color: $HeadingColor !important;
+	}
+
+	@include l-and-up {
+		font-size: 20px;
+		margin: 5px 0 5px 35px;
 	}
 }
 
