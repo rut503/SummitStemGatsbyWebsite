@@ -31,14 +31,16 @@
 }
 
 .serviceCardBox{
+	margin-top: 25px;
+	@include s-and-up{
+		margin-top: 50px;
+	}
 }
 
 .serviceCard{
 	@include CardShadow;
-	width: 75vw;
 	height: 100%;
 	padding: 10px 0;
-	// background-color: rgb(252, 170, 115);
 
 	.serviceCardContent{
 		display: flex;
@@ -53,17 +55,10 @@
 		h3{
 			@include SubHeadingFonts;
 			margin: 5px;
-			// background-color: rgb(176, 220, 221);
 		}
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////// fix responsiveness ///////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
+
 		ul{
 			@include liFonts;
-			// background-color: rgb(214, 221, 176);
-
 			li{
 				margin: 5px;
 			}
@@ -72,7 +67,6 @@
 		h6{
 			@include liFonts;
 			margin: 5px;
-			// background-color: rgb(177, 183, 236);
 		}
 	}
 
@@ -82,10 +76,16 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	min-height: 100px;
+	min-height: 75px;
 	width: 65vw;
 
-	// background-color: rgb(154, 214, 157);
+	@include s-and-up{
+		min-height: 100px;
+		width: 350px;
+	}
+	@include m-and-up{
+		min-height: 125px;
+	}
 }
 .highSchoolSVG{
 	background-image: url(../../static/images/undrawImages/highSchoolStudent.svg);
