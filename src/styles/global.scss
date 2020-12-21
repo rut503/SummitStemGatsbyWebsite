@@ -32,3 +32,41 @@ textarea {
 	max-height:25vh;
 }
 
+.carousel-inner{
+	overflow: visible;
+	// background-color: black;
+	padding: 0 12.5vw;
+	height: 475px;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//////////////////// fix opacity of next and prev controllers //////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+	filter : invert(50%) sepia(100%) saturate(100) brightness(85%);
+	opacity: 0.9;
+}
+
+.carousel-indicators{
+	bottom: -50px;
+
+	@include s-and-up{
+		bottom: -75px;
+	}
+}
+
+.carousel-indicators .active{
+	filter : invert(50%) sepia(100%) saturate(100) brightness(85%);
+}
+
+.carousel-indicators li{
+	filter: brightness(36%);
+	opacity: 1;
+	width: 13px;
+	height: 13px;
+	border: none;
+	border-radius: 10px;
+}

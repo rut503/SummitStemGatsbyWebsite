@@ -21,11 +21,11 @@ const MainPage = ({ location }) => {
 
 			<Home />
 
-			<CustomHR styles={{position: "relative", marginBottom: 30}}/>
+			<CustomHR/>
 
 			<Services />
 			
-			<CustomHR styles={{marginBottom: 30}}/>
+			<CustomHR/>
 
 			<AboutMe />
 			
