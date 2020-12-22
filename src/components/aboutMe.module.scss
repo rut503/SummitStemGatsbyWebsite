@@ -1,7 +1,118 @@
+@import "../styles/theme.scss";
+
 .container{
 	background-color: cadetblue;
+	margin: 25px auto 75px;
+
+	@include s-and-up{
+		margin: 25px auto 100px;
+	}
+}
+
+.heading{
+	@include HeadingFonts;
+	margin: 25px;
+	flex-basis: 100%;
+}
+
+.largeBook{
+	background-color: rgb(114, 114, 103);
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	width: 99vw;
+	margin: auto;
+	height: 600px;
+
+	@include m-and-up {
+		width: 97vw;
+	}
+	@include l-and-up {
+		width: 950px;
+	}
+
+	perspective: 225vw;
+	perspective-origin: center;
+}
+
+.page1, .page2, .page3, .page4{
+	@include CardShadow;
+	border-radius: 10px;
+	width: 50%;
+	height: 100%;
+	// position: absolute;
+	overflow: hidden;
 }
 
 .page1{
+	border-radius: 0 20px 20px 20px;
 
+	background-color: cyan;
+}
+
+.page2{
+	border-radius: 20px 0 20px 20px;
+	position: absolute;
+	width: 50%;
+	left: 50%;
+	
+	background-color: yellow;
+}
+.page3{
+	border-radius: 20px 20px 0 20px;
+	position: absolute;
+	width: 50%;
+	
+	background-color: orange;
+}
+.page4{
+	border-radius: 20px 20px 20px 0;
+	
+	background-color: pink;
+}
+
+.showPage2{
+	transform-origin: left;
+	transform: rotateY(0deg);
+	transition: transform 200ms;
+	transition-delay: 200ms;
+	transition-timing-function: linear;
+}
+.hidePage2{
+	transform-origin: left;
+	transform: rotateY(-90deg);
+	transition: transform 200ms;
+	transition-timing-function: linear;
+}
+
+.showPage3{
+	transform-origin: right;
+	transform: rotateY(0deg);
+	transition: transform 200ms;
+	transition-delay: 200ms;
+	transition-timing-function: linear;
+}
+.hidePage3{
+	transform-origin: right;
+	transform: rotateY(90deg);
+	transition: transform 200ms;
+	transition-timing-function: linear;
+}
+
+.erikaDP{
+	background-image: url(../../static/images/otherImages/EricaDP.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100px;
+	height: 100px;
+	margin: auto;
+
+	// @include s-and-up{
+	// 	min-height: 100px;
+	// 	width: 350px;
+	// }
+	// @include m-and-up{
+	// 	min-height: 125px;
+	// }
 }
