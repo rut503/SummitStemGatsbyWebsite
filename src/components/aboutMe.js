@@ -7,7 +7,17 @@ import { faPencilAlt } from "@fortawesome/free-solid-svg-icons"
 import aboutMeStyles from "./aboutMe.module.scss"
 
 const AboutMe = () => {
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [windowWidth, setWindowWidth] = useState()
+	useEffect(() => {
+		const getWindowWidth = () => {
+			setWindowWidth(window.innerWidth)
+		}
+		window.addEventListener("resize", getWindowWidth)
+		return () => {
+			window.removeEventListener("resize", getWindowWidth)
+		}
+	}, [])
+
 	const [firstTwoPages, setFirstTwoPages] = useState(true)
 	const [showPageNumber, setShowPageNumber] = useState({
 		from: 1,
@@ -182,16 +192,6 @@ const AboutMe = () => {
 			}
 		}
 	}, [showPageNumber, windowWidth, firstTwoPages])
-
-	useEffect(() => {
-		const getWindowWidth = () => {
-			setWindowWidth(window.innerWidth)
-		}
-		window.addEventListener("resize", getWindowWidth)
-		return () => {
-			window.removeEventListener("resize", getWindowWidth)
-		}
-	}, [])
 
 	return(
 		<div id="AboutMe" className={aboutMeStyles.container}>
