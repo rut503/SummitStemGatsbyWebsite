@@ -5,23 +5,37 @@ import contactMeStyles from "./contactMe.module.scss"
 
 const ContactMe = () => {
 
-	const [name, setName] = useState("")
-	const [email, setEmail] = useState("")
-	const [message, setMessage] = useState("")
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		message: ""
+	})
 
-	const handleInputChange = (e) => {
-		const value = e.target.value
-		const name = e.target.name
-
-		if(name === "name") setName(value)
-		else if(name === "email") setEmail(value)
-		else if(name === "message") setMessage(value)
-		else console.log("Problem with contact form...")
+	const handleInputChange = e => {
+		setFormData({ ...formData, [e.target.name]: e.target.value })
 	}
 
 	const handleSubmit = (e) => {
-		e.preventDefault()
-		console.log(`Name: ${name} \nEmail: ${email}\nMessage: ${message}`)
+		console.log(`Name: ${formData.name} \nEmail: ${formData.email}\nMessage: ${formData.message}`)
+
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: encode({ "form-name": "contact", ...formData })
+		})
+		.then(() => alert("Message Sent"))
+		.catch(error => {
+			alert("Message Sent")
+			console.log(error)
+		});
+
+		e.preventDefault();
+	}
+
+	const encode = (data) => {
+		return Object.keys(data)
+			.map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+			.join("&");
 	}
 
 	return(
@@ -46,6 +60,7 @@ const ContactMe = () => {
 				</form> */}
 
 				<form onSubmit={handleSubmit}>
+					
 					<label>
 						<span>Name</span>
 						<br/>
@@ -54,7 +69,7 @@ const ContactMe = () => {
 							name="name"
 							required
 							className={contactMeStyles.name}
-							value={name}
+							value={formData.name}
 							onChange={handleInputChange}
 						/>
 					</label>
@@ -67,7 +82,7 @@ const ContactMe = () => {
 							name="email"
 							required
 							className={contactMeStyles.email}
-							value={email}
+							value={formData.email}
 							onChange={handleInputChange}
 						/>
 					</label>
@@ -81,12 +96,12 @@ const ContactMe = () => {
 							rows={5}
 							required
 							className={contactMeStyles.message}
-							value={message}
+							value={formData.message}
 							onChange={handleInputChange}
 						/>
 					</label>
 
-					<button className={contactMeStyles.submitBtn} type="submit">
+					<button className={contactMeStyles.submitBtn} type="submit" value="Submit">
 						Send Message
 					</button>
 				</form>
