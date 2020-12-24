@@ -47,7 +47,7 @@ const Services = () => {
 								<li>Preparation for College Visits</li>
 								<li>Scholarship Searches & Application Assistance</li>
 							</ul>
-							<CustomHR />
+							<CustomHR styles={{height: 5}}/>
 							<h6>
 								Personalized, Private Tutoring in Biology, Chemistry, 
 								and the Geosciences
@@ -68,7 +68,7 @@ const Services = () => {
 								<li>Mock interviews</li>
 								<li>Scholarship Searches & Application Assistance</li>
 							</ul>
-							<CustomHR />
+							<CustomHR styles={{height: 5}}/>
 							<h6>
 								Personalized, Private Tutoring in Biology, Chemistry, 
 								and the Geosciences
@@ -87,7 +87,7 @@ const Services = () => {
 								<li>Preparation for Job Interviews and Mock Interviews</li>
 								<li>Resume / CV / Cover Letter Assistance</li>
 							</ul>
-							<CustomHR />
+							<CustomHR styles={{height: 5}}/>
 						{/* </Carousel.Caption> */}
 					</div>
 				</Carousel.Item>
@@ -105,7 +105,7 @@ const Services = () => {
 									biology, chemistry, and the geosciences
 								</li>
 							</ul>
-							<CustomHR />
+							<CustomHR styles={{height: 5}}/>
 						{/* </Carousel.Caption> */}
 					</div>
 				</Carousel.Item>
