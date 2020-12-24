@@ -1,30 +1,32 @@
 @import "../styles/theme.scss";
 
 .container{
-	background-color: greenyellow;
+	left: 48%;
 	position: absolute;
-	z-index: 10 !important;
+	z-index: 4;
 }
 
 .hole1, .hole2{
 	position: absolute;
 	background-color: $HeadingColor;
 	border-radius: 100%;
-	width: 15px;
-	height: 15px;
-	top: 15px;
+	width: 10px;
+	height: 10px;
+	top: 10px;
 }
 
 .hole2{
-	margin-left: 40px;
+	margin-left: 30px;
 }
 
 .arch{
 	position: absolute;
-	// background-color: green;
-	width: 50px;
-	height: 50px;
+	left: 3px;
+	width: 35px;
+	height: 15px;
 
-	border: 10px solid $AccentColor;
-	border-radius: 100%;
+	border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+	border: 5px solid $AccentColor;
+	border-bottom: 0;
 }

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons"
 
-import BookSpiral from "./bookSpiral"
+// import BookSpiral from "./bookSpiral"
 import aboutMeStyles from "./aboutMe.module.scss"
 
 const AboutMe = () => {
@@ -199,12 +199,18 @@ const AboutMe = () => {
 			<h1 className={aboutMeStyles.heading}>About Me</h1>
 
 			<div className={aboutMeStyles.book}>
-				<BookSpiral style={{marginTop: 100}}/>
-				<BookSpiral style={{marginTop: 200}}/>
-				<BookSpiral style={{marginTop: 300}}/>
+				{/* <BookSpiral styles={{marginTop: 100}}/>
+				<BookSpiral styles={{marginTop: 200}}/>
+				<BookSpiral styles={{marginTop: 300}}/> */}
 
-				<div className={`${aboutMeStyles.page1} 
-								 ${classnamesForPages.page1}`}>
+				<div className={`${aboutMeStyles.page1} ${classnamesForPages.page1}`}>
+
+					{/* <div className={aboutMeStyles.bookHolesDiv}>
+						<div className={aboutMeStyles.bookHole}></div>
+						<div className={aboutMeStyles.bookHole}></div>
+						<div className={aboutMeStyles.bookHole}></div>
+					</div> */}
+
 					<div className={aboutMeStyles.imageErika}></div>
 					<p className={aboutMeStyles.pageTitle}>I’m Erika Zocher, M.S.</p>
 
@@ -287,8 +293,8 @@ const AboutMe = () => {
 					</div>
 				</div>
 
-				<div className={`${aboutMeStyles.page3} 
-								 ${classnamesForPages.page3}`}>
+				<div className={`${aboutMeStyles.page3} ${classnamesForPages.page3}`}>
+
 					<p className={aboutMeStyles.pageTitle}>My Rocky Journey</p>
 
 					<div className={aboutMeStyles.scrollableDiv}>

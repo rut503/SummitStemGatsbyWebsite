@@ -9,8 +9,6 @@ import Services from "../components/Services"
 import AboutMe from "../components/aboutMe"
 import ContactMe from "../components/contactMe"
 
-import CustomHR from "../components/customHR"
-
 const MainPage = ({ location }) => {
 
 	return (

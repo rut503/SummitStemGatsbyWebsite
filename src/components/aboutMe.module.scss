@@ -72,8 +72,6 @@
 	// border-radius: 0 20px 20px 20px;
 	// background-color: rgb(212, 252, 252);
 	z-index: 4;
-
-	
 	@include m-and-up{
 		z-index: 0;
 	}
@@ -377,3 +375,26 @@
 		}
 	}
 }
+
+// .bookHolesDiv{
+// 	// background-color: aqua;
+// 	position: absolute;
+// 	height: 90%;
+// 	display: flex;
+// 	flex-direction: column;
+
+// 	@include s-and-up{
+// 		height: 85%;
+// 	}
+// 	@include m-and-up{
+// 		height: 90%;
+// 	}
+	
+// 	div{
+// 		background-color: $HeadingColor;
+// 		border-radius: 100%;
+// 		width: 15px;
+// 		height: 15px;
+// 		margin: auto;
+// 	}
+// }

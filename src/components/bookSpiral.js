@@ -2,14 +2,14 @@ import React from "react"
 
 import bookSpiralStyles from "./bookSpiral.module.scss"
 
-const BookSpiral = ({ style }) => {
+const BookSpiral = ({ styles }) => {
 	return(
 		<div className={bookSpiralStyles.container}
-			style={style}
+			style={styles}
 		>
 			<div className={bookSpiralStyles.hole1}></div>
-			<div className={bookSpiralStyles.arch}></div>
 			<div className={bookSpiralStyles.hole2}></div>
+			<div className={bookSpiralStyles.arch}></div>
 		</div>
 	)
 }
