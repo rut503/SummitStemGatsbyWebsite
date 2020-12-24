@@ -5,7 +5,7 @@ import Footer from "../components/footer"
 import MoveToTopBtn from "../components/moveToTopBtn"
 
 import Home from "../components/home"
-import Services from "../components/Services"
+import Services from "../components/services"
 import AboutMe from "../components/aboutMe"
 import ContactMe from "../components/contactMe"
 
