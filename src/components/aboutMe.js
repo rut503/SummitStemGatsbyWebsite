@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPencilAlt } from "@fortawesome/free-solid-svg-icons"
+
+import BookSpiral from "./bookSpiral"
 import aboutMeStyles from "./aboutMe.module.scss"
 
 const AboutMe = () => {
@@ -15,9 +19,45 @@ const AboutMe = () => {
 		page3: undefined,
 		page4: undefined
 	})
+	const [bookButtons, setBookButtons] = useState()
 
 	useEffect(() => {
 		if(windowWidth < 768 ){   // screen size less than medium
+
+			// set different types of buttons
+			setBookButtons(<div className={aboutMeStyles.bookButtonsDiv}>
+				<button 
+					onClick={() => setShowPageNumber({
+						from: showPageNumber.to, 
+						to: showPageNumber.to-1
+					})}
+					disabled={showPageNumber.to === 1 ? true : false}
+					className={aboutMeStyles.bookButton}
+				>
+					<div>
+						<div>
+							<FontAwesomeIcon icon={faPencilAlt} style={{transform: "rotate(45deg)"}}/>
+						</div>
+						<span>PREV</span>
+					</div>
+				</button>
+				<button 
+					onClick={() => setShowPageNumber({
+						from: showPageNumber.to, 
+						to: showPageNumber.to+1
+					})}
+					disabled={showPageNumber.to === 4 ? true : false}
+					className={aboutMeStyles.bookButton}
+				>
+					<div>
+						<span>NEXT</span>
+						<div>
+							<FontAwesomeIcon icon={faPencilAlt} style={{transform: "rotate(-135deg)"}}/>
+						</div>
+					</div>
+				</button>
+			</div>)
+
 			if(showPageNumber.to > showPageNumber.from){ // going forward
 				console.log("Going Forward")
 				if(showPageNumber.to === 1){ // going to page 1
@@ -96,6 +136,34 @@ const AboutMe = () => {
 			}
 		}
 		else{ // screen size more than medium
+
+			setBookButtons(<div className={aboutMeStyles.bookButtonsDiv}>
+				<button 
+					onClick={() => setFirstTwoPages(true)}
+					disabled={firstTwoPages ? true : false}
+					className={aboutMeStyles.bookButton}
+				>
+					<div>
+						<div>
+							<FontAwesomeIcon icon={faPencilAlt} style={{transform: "rotate(45deg)"}}/>
+						</div>
+						<span>PREV</span>
+					</div>
+				</button>
+				<button 
+					onClick={() => setFirstTwoPages(false)}
+					disabled={firstTwoPages ? false : true}
+					className={aboutMeStyles.bookButton}
+				>
+					<div>
+						<span>NEXT</span>
+						<div>
+							<FontAwesomeIcon icon={faPencilAlt} style={{transform: "rotate(-135deg)"}}/>
+						</div>
+					</div>
+				</button>
+			</div>)
+
 			if(firstTwoPages){
 				setClassnamesForPages({
 					page1: undefined,
@@ -129,9 +197,11 @@ const AboutMe = () => {
 		<div id="AboutMe" className={aboutMeStyles.container}>
 
 			<h1 className={aboutMeStyles.heading}>About Me</h1>
-			<p>{windowWidth}</p>
 
-			<div className={aboutMeStyles.largeBook}>
+			<div className={aboutMeStyles.book}>
+				<BookSpiral style={{marginTop: 100}}/>
+				<BookSpiral style={{marginTop: 200}}/>
+				<BookSpiral style={{marginTop: 300}}/>
 
 				<div className={`${aboutMeStyles.page1} 
 								 ${classnamesForPages.page1}`}>
@@ -139,9 +209,8 @@ const AboutMe = () => {
 					<p className={aboutMeStyles.pageTitle}>I’m Erika Zocher, M.S.</p>
 
 					<div className={aboutMeStyles.scrollableDiv}
-						style={{height: "62%"}}>
-						<p className={aboutMeStyles.pageSubTitle}
-							style={{marginBottom: 15}}>Education</p>
+						style={{height: "64%"}}>
+						<p className={aboutMeStyles.pageSubTitle}>Education</p>
 						
 						<div className={aboutMeStyles.flexyDiv}>
 							<div className={aboutMeStyles.imageNIU}></div>
@@ -160,7 +229,7 @@ const AboutMe = () => {
 								<li style={{marginTop: 5}}>Aug 20__ - May 20__</li>
 								<li>Degree: B.S.</li>
 								<li>Major: Environmental Geosciences</li>
-								<li style={{paddingLeft: 50}}>– Geology Emphasis</li>
+								{/* <li style={{paddingLeft: 50}}>– Geology Emphasis</li> */}
 								<li>Minor: Biology</li>
 							</ul>
 						</div>
@@ -169,10 +238,11 @@ const AboutMe = () => {
 
 				<div className={`${aboutMeStyles.page2} 
 								 ${classnamesForPages.page2}`}>
-					<p className={aboutMeStyles.pageTitle}>My Presentations & Publications</p>
+					<h6 className={aboutMeStyles.pageTitle}>Presentations & Publications</h6>
 
 					<div className={aboutMeStyles.scrollableDiv}>
-						<p className={aboutMeStyles.pageSubTitleSmall}>Master’s Thesis, 2020</p>
+						<p className={aboutMeStyles.pageSubTitleSmall}
+							style={{marginTop: 0}}>Master’s Thesis, 2020</p>
 						<hr/>
 						<p className={aboutMeStyles.pageTextSmall}>Qualitative Perspectives on the Strange Trails of Persistence in STEM</p>
 						<hr/>
@@ -291,46 +361,10 @@ const AboutMe = () => {
 						</p>
 					</div>
 				</div>
-			</div>
 
-			{/* ============================================================ */}
-			<button 
-				onClick={() => setFirstTwoPages(true)}
-				disabled={firstTwoPages ? true : false}
-			>
-				Prev
-			</button>
-			<button 
-				onClick={() => setFirstTwoPages(false)}
-				disabled={firstTwoPages ? false : true}
-			>
-				Next
-			</button>
-			<p>{firstTwoPages ? "Page : 1-2" : "Page : 3-4"}</p>
-			
-			{/* ============================================================ */}
-			
-			<button 
-				// onClick={() => setShowPageNumber(Math.abs((showPageNumber-1) % 4))}
-				onClick={() => setShowPageNumber({
-					from: showPageNumber.to, 
-					to: showPageNumber.to-1
-				})}
-				disabled={showPageNumber.to === 1 ? true : false}
-			>
-				Prev-S
-			</button>
-			<button 
-				onClick={() => setShowPageNumber({
-					from: showPageNumber.to, 
-					to: showPageNumber.to+1
-				})}
-				disabled={showPageNumber.to === 4 ? true : false}
-			>
-				Next-S
-			</button>
-			<p>Pre Page : {showPageNumber.from}</p>
-			<p>Current Page : {showPageNumber.to}</p>
+				{bookButtons}
+
+			</div>
 		</div>
 	)
 }

@@ -1,27 +1,23 @@
 @import "../styles/theme.scss";
 
 .container{
-	@include CardShadow;
 	text-align: left;
+	padding-bottom: 25px;
 	margin: 25px auto;
-	padding: 25px 0 35px;
+	width: 90vw;
 
 	@include s-and-up{
-		margin: 50px;
-		padding: 50px 0 70px;
-	}
-	@include m-and-up{
-		display: flex;
-		flex-wrap: wrap;
-		margin: 100px 25px;
-		padding: 50px 25px 70px;
+		margin: 50px auto;
+		width: 450px;
 	}
 	@include l-and-up {
-		margin: 100px 50px;
-	}
-	@include xl-and-up {
-		width: 1100px;
+		display: flex;
+		flex-wrap: wrap;
 		margin: 100px auto;
+		width: 950px;
+	}
+	@include xl-and-up{
+		width: 1150px
 	}
 	
 	h1{
@@ -30,7 +26,7 @@
 		margin-bottom: 25px;
 		flex-basis: 100%;
 
-		@include s-and-up{
+		@include l-and-up{
 			margin-bottom: 50px;
 		}
 	}
@@ -40,14 +36,14 @@
 
 		form{
 			@include MediumTextFonts;
-			width: 95vw;
+			width: 90vw;
 			margin: auto;
 
 			@include s-and-up {
-				width: 400px;
+				width: 450px;
 			}
-	
-			.customLabel{
+			
+			span{
 				color: $AccentColor;
 			}
 
@@ -55,10 +51,10 @@
 				@include CustomInputs;
 				@include SmallTextFonts;
 				margin: 5px auto 10px;
-				width: 95vw;
+				width: 90vw;
 
 				@include s-and-up {
-					width: 400px;
+					width: 450px;
 				}
 			}
 

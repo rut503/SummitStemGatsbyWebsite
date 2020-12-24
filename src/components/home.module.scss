@@ -46,48 +46,36 @@
 }
 
 .philosophy{
-	@include CardShadow;
-	width: 95vw;
-	padding: 25px 20px;
+	width: 90vw;
 	margin: 25px auto;
 	
 	@include s-and-up {
-		width: 90vw;
-		padding: 50px 40px;
 		margin: 50px auto;
 	}
-	@include m-and-up {
-		width: 80vw;
-		padding: 50px;
+	@include l-and-up{
+		width: 900px;
 		margin: 100px auto;
-	}
-	@include xl-and-up {
-		width: 1000px;
-		padding: 50px 80px;
 	}
 
 	h1{
 		@include HeadingFonts;
 		margin-bottom: 25px;
 
-		@include s-and-up{
+		@include l-and-up{
 			margin-bottom: 50px;
 		}
 	}
 	h4{
 		@include LargeTextFonts;
-		margin-bottom: 20px;
+		margin: 25px auto;
 
-		@include s-and-up {
-			margin-bottom: 30px;
-		}
-		@include m-and-up {
-			margin-bottom: 40px;
+		@include l-and-up {
+			margin: 50px auto;
 		}
 	}
 	button{
 		@include CustomButton;
-		margin: 20px auto;
+		margin-bottom: 20px;
 		padding: 0;
 
 		.icon{
@@ -97,8 +85,8 @@
 			font-size: 20px;
 			padding: 22px 20px;
 
-			@include s-and-up {
-				padding: 17px 25px;
+			@include l-and-up {
+				padding: 22px 30px;
 				font-size: 24px;
 			}
 		}
@@ -112,7 +100,7 @@
 			p{
 				padding: 13px 0;
 				@include s-and-up {
-					padding: 23px 34px;
+					padding: 23px 20px;
 				}
 			}
 		}

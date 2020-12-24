@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 
+import CustomHR from "./customHR"
 import contactMeStyles from "./contactMe.module.scss"
 
 const ContactMe = () => {
@@ -25,6 +26,7 @@ const ContactMe = () => {
 
 	return(
 		<div id="ContactMe" className={contactMeStyles.container}>
+			<CustomHR styles={{marginBottom: 15}}/>
 			
 			<h1>Contact Me</h1>
 			
@@ -45,9 +47,8 @@ const ContactMe = () => {
 
 				<form onSubmit={handleSubmit}>
 					<label>
-						<span className={contactMeStyles.customLabel}>
-							Name
-						</span>
+						<span>Name</span>
+						<br/>
 						<input
 							type="text"
 							name="name"
@@ -59,9 +60,8 @@ const ContactMe = () => {
 					</label>
 
 					<label>
-						<span className={contactMeStyles.customLabel}>
-							Email
-						</span>
+						<span>Email</span>
+						<br/>
 						<input
 							type="email"
 							name="email"
@@ -73,9 +73,8 @@ const ContactMe = () => {
 					</label>
 
 					<label>
-						<span className={contactMeStyles.customLabel}>
-							Message
-						</span>
+						<span>Message</span>
+						<br/>
 						<textarea
 							type="text"
 							name="message"

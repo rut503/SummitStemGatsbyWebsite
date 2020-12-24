@@ -1,11 +1,14 @@
 @import "../styles/theme.scss";
 
 .container{
-	background-color: cadetblue;
-	margin: 25px auto 75px;
+	padding-bottom: 50px;
+	margin: 25px auto;
 
 	@include s-and-up{
-		margin: 25px auto 100px;
+		margin: 50px auto;
+	}
+	@include l-and-up{
+		margin: 100px auto;
 	}
 }
 
@@ -13,17 +16,30 @@
 	@include HeadingFonts;
 	margin: 25px auto;
 	flex-basis: 100%;
+
+	@include s-and-up{
+		margin: 50px auto;
+	}
 }
 
-.largeBook{
-	background-color: rgb(114, 114, 103);
-	perspective: 1250px;
+.book{
+	perspective: 1300px;
 	perspective-origin: center;
 	position: relative;
-	width: 500px;
-	height: 600px;
 	margin: auto;
+	width: 95vw;
+	height: 500px;
 
+	@include s-and-up{
+		height: 600px;
+	}
+
+	@include xs-and-up{
+		width: 350px;
+	}
+	@include s-and-up{
+		width: 500px;
+	}
 	@include m-and-up {
 		display: flex;
 		flex-wrap: wrap;
@@ -40,9 +56,11 @@
 	border-radius: 10px;
 	width: 100%;
 	height: 100%;
-	padding: 50px 0 20px;
+	padding: 20px 0;
 
-	// overflow: auto;
+	@include s-and-up{
+		padding: 50px 0 20px;
+	}
 	@include m-and-up{
 		padding: 20px 0;
 		position: static;
@@ -54,6 +72,8 @@
 	// border-radius: 0 20px 20px 20px;
 	// background-color: rgb(212, 252, 252);
 	z-index: 4;
+
+	
 	@include m-and-up{
 		z-index: 0;
 	}
@@ -66,6 +86,19 @@
 		position: absolute;
 		width: 50%;
 		left: 50%;
+	}
+
+	h6:first-of-type{
+		font-size: 16px;
+		@include xs-and-up{
+			font-size: 24px;
+		}
+		@include m-and-up{
+			font-size: 20px;
+		}
+		@include l-and-up{
+			font-size: 24px;
+		}
 	}
 	// background-color: rgb(255, 255, 218);
 }
@@ -131,15 +164,23 @@
 
 .flipPage{
 	transform-origin: left;
-	transform: rotateY(-258.68deg);
-	transition: transform 1s;
+	transition: transform 400ms;
 	transition-timing-function: linear;
+	transform: rotateY(-264.12deg);
+
+	@include xs-and-up{
+		transform: rotateY(-262.33deg);
+	}
+	@include s-and-up{
+		transform: rotateY(-259.2deg);
+	}
+
 }
 .unflipPage{
 	transform-origin: left;
-	transform: rotateY(0deg);
-	transition: transform 1s;
+	transition: transform 400ms;
 	transition-timing-function: linear;
+	transform: rotateY(0deg);
 }
 
 .imageErika, .imageNC, .imageNIU {
@@ -152,32 +193,54 @@
 
 .imageErika{
 	background-image: url(../../static/images/otherImages/EricaDP.png);
-	margin: 20px auto;
-	width: 125px;
-	height: 125px;
+	margin: 0 auto 10px;
+	width: 100px;
+	height: 100px;
+	@include s-and-up{
+		margin: 10px auto;
+		width: 125px;
+		height: 125px;
+	}
 }
 .imageNC{
 	background-image: url(../../static/images/otherImages/NC.png);
 	width: 50px;
 	height: 50px;
+	display: none;
+
+	@include xs-and-up{
+		display: initial;
+	}
 }
 .imageNIU{
 	background-image: url(../../static/images/otherImages/NIU.png);
 	width: 50px;
 	height: 50px;
+	display: none;
+
+	@include xs-and-up{
+		display: initial;
+	}
 }
 
 .scrollableDiv{
-	padding: 0 30px;
+	padding: 0 15px;
 	overflow: auto;
 	max-height: 90%;
+
+	@include s-and-up{
+		padding: 0 30px;
+	}
+
 	&::-webkit-scrollbar {
 		width: 4px;
 	}
 	&::-webkit-scrollbar-track{
+		border-radius: 10px;
 		background-color: #D7D7D7;
 	}
 	&::-webkit-scrollbar-thumb{
+		border-radius: 10px;
 		background-color: $AccentColor;
 	}
 
@@ -189,10 +252,13 @@
 
 .flexyDiv{
 	display: flex;
-	margin: 25px auto;
+	margin: 10px auto;
 
+	@include s-and-up{
+		margin: 35px auto;
+	}
 	@include l-and-up{
-		margin: 17px auto;
+		margin: 25px auto;
 	}
 
 	ul{
@@ -204,10 +270,13 @@
 
 .pageTitle{
 	margin-bottom: 20px;
-	color: $HeadingColor;
+	// color: $HeadingColor;
+	color: $AccentColor;
 	font-family: 'Rubik', 'Times New Roman', Times, serif;
-	font-size: 24px;
-
+	font-size: 20px;
+	@include xs-and-up{
+		font-size: 24px;
+	}
 	@include m-and-up{
 		font-size: 20px;
 	}
@@ -220,11 +289,8 @@
 	text-align: left;
 	color: $HeadingColor;
 	font-family: 'Rubik', 'Times New Roman', Times, serif;
-	font-size: 20px;
+	font-size: 16px;
 
-	@include m-and-up{
-		font-size: 16px;
-	}
 	@include l-and-up{
 		font-size: 20px;
 	}
@@ -234,27 +300,20 @@
 	text-align: left;
 	color: $HeadingColor;
 	font-family: 'Rubik', 'Times New Roman', Times, serif;
-	font-size: 18px;
+	font-size: 16px;
 
-	@include m-and-up{
-		font-size: 16px;
-	}
 	@include l-and-up{
 		font-size: 18px;
 	}
-	// color: rgb(42, 165, 42);
 }
 
 .pageText{
 	text-align: left;
 	color: $TextColor;
 	font-family: 'Roboto', 'Times New Roman', Times, serif;
-	font-size: 16px;
+	font-size: 14px;
 	margin-bottom: 20px;
 
-	@include m-and-up{
-		font-size: 14px;
-	}
 	@include l-and-up{
 		font-size: 16px;
 	}
@@ -266,8 +325,55 @@
 	text-align: left;
 	color: $TextColor;
 	font-family: 'Roboto', 'Times New Roman', Times, serif;
-	font-size: 13px;
-
-	// color: rgb(100, 84, 138);
+	font-size: 14px;
 }
 
+.bookButtonsDiv{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;	
+}
+
+.bookButton{
+	z-index: 5;
+
+	@include CustomButton;
+	padding: 0;
+	overflow: hidden;
+	margin-top: 500px;
+
+	@include s-and-up{
+		margin-top: 600px;
+	}
+
+	@include m-and-up{ // this has to do with positioning of prev and next buttons
+		margin-top: 0;
+	}
+
+	div{
+		display: flex;
+		justify-content: center;
+
+		span{
+			font-size: 10px;
+			margin: auto;
+			padding: 0 15px;
+
+			@include s-and-up{
+				font-size: 14px;
+				padding: 0 25px;		
+			}
+		}
+
+		div{
+			background-color: black;
+			padding: 7px 10px;
+			font-size: 14px;
+
+			@include s-and-up{
+				padding: 10px 15px;
+				font-size: 20px;
+			}
+		}
+	}
+}
