@@ -20,7 +20,8 @@ const NavBar = () => {
 				<div className={navbarStyles.logoDiv}>
 					<img src={"../../images/otherImages/SummitSTEMLogo.png"}
 						alt="Summit Stem Logo"
-						width="70px"
+						width="80px"
+						height="58px"
 					/>
 					<p>Educational Consulting & Success Coaching</p>
 				</div>

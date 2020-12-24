@@ -21,11 +21,7 @@ const MainPage = ({ location }) => {
 
 			<Home />
 
-			<CustomHR/>
-
 			<Services />
-			
-			<CustomHR/>
 
 			<AboutMe />
 			

@@ -1,12 +1,12 @@
 @import "../styles/theme.scss";
 
 .container{
-	margin: 25px auto 75px;
+	margin: 25px auto;
 
 	@include s-and-up{
-		margin: 50px auto 100px;
+		margin: 50px auto;
 	}
-	@include m-and-up{
+	@include l-and-up{
 		margin: 100px auto;
 	}
 
@@ -14,26 +14,25 @@
 		@include HeadingFonts;
 		margin-bottom: 25px;
 
-		@include s-and-up{
+		@include l-and-up{
 			margin-bottom: 50px;
 		}
 	}
 
 	h4{
 		@include LargeTextFonts;
-		margin: 0 auto 25px;
+		padding: 0 10px;
+		margin: 25px auto;
 		max-width: 630px;
 
-		span{
-			color: $AccentColor;
-		}
+		span{ color: $AccentColor; }
 	}
 }
 
 .serviceCardBox{
-	margin-top: 25px;
-	@include s-and-up{
-		margin-top: 50px;
+	margin: 25px auto;
+	@include l-and-up{
+		margin: 50px auto;
 	}
 }
 

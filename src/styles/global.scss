@@ -20,6 +20,7 @@ a {
 ul{
 	list-style-type: none;
 	padding: 0;
+	margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -35,13 +36,14 @@ textarea {
 .carousel-inner{
 	overflow: visible;
 	margin: auto;
-	height: 475px;
+	height: 425px;
 	width: 75vw;
 
 	@include xs-and-up{
-		height: 500px;
+		height: 460px;
 	}
 	@include s-and-up{
+		height: 500px;
 		width: 400px;
 	}
 }
@@ -53,10 +55,6 @@ textarea {
 
 .carousel-indicators{
 	bottom: -50px;
-
-	@include s-and-up{
-		bottom: -75px;
-	}
 }
 
 .carousel-indicators .active{

@@ -15,6 +15,7 @@ const Services = () => {
 
 	return(
 		<div id="Services" className={servicesStyles.container}>
+			<CustomHR styles={{marginBottom: 15}}/>
 			
 			<h1>Services</h1>
 
@@ -109,6 +110,8 @@ const Services = () => {
 					</div>
 				</Carousel.Item>
 			</Carousel>
+
+			<br/>
 			
 			{/* <div  className={servicesStyles.serviceCarousel}>
 				<div className={servicesStyles.serviceCard}>
