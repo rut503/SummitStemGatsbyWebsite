@@ -30,6 +30,7 @@ const ContactMe = () => {
 		});
 
 		e.preventDefault();
+		setFormData({ name: "", email: "", message: "" })
 	}
 
 	const encode = (data) => {

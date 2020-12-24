@@ -6,12 +6,16 @@ import MoveToTopBtn from "../components/moveToTopBtn"
 
 const BlogPage = () => {
 	return(
-		<div>
+		<div style={{
+			display: "flex",
+			flexDirection: "column",
+			height: "100vh"
+		}}>
 			<MoveToTopBtn moveTo="Blog"/>
 
 			<NavBar />
 		
-			<h1 id="Blog" style={{ color: "white" }}>Blog is comming soon...</h1>
+			<h1 id="Blog" style={{ color: "#D31F39", margin: "auto" }}>Blog is comming soon...</h1>
 
 			<Footer />
 		</div>
