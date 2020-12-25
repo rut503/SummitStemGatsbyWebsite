@@ -5,8 +5,20 @@
  */
 
 module.exports = {
-	/* Your site config here */
+	siteMetadata: {
+		title: `Summit STEM`,
+		description: `Education consulting for STEM Majors`,
+		keywords: `STEM, STEM Major, Resume Help, Education, ...`,
+		url: `https://www.summitstem.com`,
+		image: `./static/otherImages/...`,
+		lang: `en`,
+		twitterUsername: `@SummitSTEM`,
+		author: `Erika Zocher`,
+		dev: `Rutvik Patel`,
+		devLink: `www.rutvikpatel...`,
+	},
 	plugins: [
+		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sass`,
 		{
 			resolve: "gatsby-plugin-anchor-links",
