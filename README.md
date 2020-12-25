@@ -9,36 +9,36 @@
 </h1>
 
 ## TODO: 1
-1. Add All Images
-2. Add All Icons 
-3. Add All SVGs
-4. Create Global Styling
+- [X] Add All Images
+- [X] Add All Icons 
+- [X] Add All SVGs
+- [X] Create Global Styling
 
 ## TODO: 2
-1. Style Navbar
-2. Style Home
-3. Full Blown Background Image
-4. Style Philosophy
-5. Style Footer
+- [X] Style Navbar
+- [X] Style Home
+- [X] Full Blown Background Image
+- [X] Style Philosophy
+- [X] Style Footer
 
 ## TODO: 3
-1. Style Services
-2. Create Card Carousel
-3. Style Card Carousel
-4. Test Carousel Properly
+- [X] Style Services
+- [X] Create Card Carousel
+- [X] Style Card Carousel
+- [X] Test Carousel Properly
 
 ## TODO: 4
-1. Style About Me
-2. Create Custome Book
-3. Style Custome Book
-4. Test Custome Book Properly
+- [X] Style About Me
+- [X] Create Custome Book
+- [X] Style Custome Book
+- [X] Test Custome Book Properly
 
 ## TODO: 5
-1. Create Contact Me Form
-2. Style Contact Me
-3. Find A Solution To Send Emails
-4. Implement Email Sending Solution
-5. Test Contact Me Form
+- [X] Create Contact Me Form
+- [X] Style Contact Me
+- [X] Find A Solution To Send Emails
+- [X] Implement Email Sending Solution
+- [X] Test Contact Me Form
 
 ## TODO: 6
 1. Create Favicon
@@ -81,5 +81,3 @@
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
