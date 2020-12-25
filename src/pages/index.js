@@ -1,8 +1,6 @@
 import React from "react"
 
-import NavBar from "../components/navbar"
-import Footer from "../components/footer"
-import MoveToTopBtn from "../components/moveToTopBtn"
+import Layout from "../layout/layout"
 
 import Home from "../components/home"
 import Services from "../components/services"
@@ -12,11 +10,7 @@ import ContactMe from "../components/contactMe"
 const MainPage = ({ location }) => {
 
 	return (
-		<>
-			<MoveToTopBtn moveTo="Top"/>
-
-			<NavBar />
-
+		<Layout>
 			<Home />
 
 			<Services />
@@ -24,9 +18,7 @@ const MainPage = ({ location }) => {
 			<AboutMe />
 			
 			<ContactMe />
-
-			<Footer />
-		</>
+		</Layout>
 	);
 }
 
