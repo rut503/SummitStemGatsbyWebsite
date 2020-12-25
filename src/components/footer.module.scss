@@ -30,14 +30,10 @@
 			@include CustomButton;
 			box-shadow: 0px 3px 5px rgba(211, 31, 57, 0.6);
 			border-radius: 5px;
-			width: 30px;
-			height: 30px;
-
-			@include m-and-up{
-				width: 40px;
-				height: 40px;
-				font-size: 24px;
-			}
+			width: 40px;
+			height: 40px;
+			font-size: 24px;
+			padding: 2px;
 
 			&:focus{ outline: none; }
 

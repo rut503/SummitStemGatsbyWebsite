@@ -316,28 +316,17 @@ const AboutMe = () => {
 						</p>
 						<p className={aboutMeStyles.pageText}>
 							The break from academia afforded me an opportunity to teach 
-							science to the public in various roles outside of what I 
-							had originally planned: as a museum facilitator, a 
-							nonprofit worker, and a high school educator. I later 
-							re-entered graduate school, this time joining a geoscience 
-							education research lab. Here, I 
+							science to the public in various roles outside of what I had 
+							originally planned: as a museum facilitator, a nonprofit 
+							worker, and a high school educator. I later re-entered 
+							graduate school, this time joining a geoscience education 
+							research lab. Here, I created and led a social support group 
+							to promote undergraduate persistence in STEM. My research 
+							efforts have highlighted the importance of small group 
+							processes and fostering a sense of belonging to support 
+							students’ academic success.
 						</p>
-						<p className={aboutMeStyles.pageText}>
-							The break from academia afforded me an opportunity to teach 
-							science to the public in various roles outside of what I 
-							had originally planned: as a museum facilitator, a 
-							nonprofit worker, and a high school educator. I later 
-							re-entered graduate school, this time joining a geoscience 
-							education research lab. Here, I 
-						</p>
-						<p className={aboutMeStyles.pageText}>
-							The break from academia afforded me an opportunity to teach 
-							science to the public in various roles outside of what I 
-							had originally planned: as a museum facilitator, a 
-							nonprofit worker, and a high school educator. I later 
-							re-entered graduate school, this time joining a geoscience 
-							education research lab. Here, I 
-						</p>
+						
 					</div>
 				</div>
 
@@ -357,13 +346,12 @@ const AboutMe = () => {
 							designed for collaboration and one that celebrates a 
 							diversity of people and ideas.
 						</p>
-						<p className={aboutMeStyles.pageText}>
-							My expertise in mentoring and student support can be widely 
-							applied to meet your academic or professional needs.
-						</p>
-
 						<p className={aboutMeStyles.pageText} style={{textAlign: "center"}}>
-							<span>Let me help you Summit STEM!</span>
+							<span>
+								My expertise in mentoring and student support can be widely 
+								applied to meet your academic or professional needs. Let me 
+								help you Summit STEM!
+							</span>
 						</p>
 					</div>
 				</div>
