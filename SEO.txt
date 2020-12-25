@@ -1,0 +1,55 @@
+Title (title tag)
+Description (meta tag)
+URL (www.summitstem.com/blog/<this part needs to be very specific to the page)
+Keywords (meta tag, Keywords are comma separated values)
+Viewport (meta tag, used to make sure content is scalable)
+Charset (meta tag, used to show which char types are used e.g. UTF-8)
+Author (meta tag, used for blog pages to show author names)
+Favicons (Distinguishable)
+Images (Compressed)
+Attributes (add alt property to all images)
+Titles (add title property to all <a> links)
+Minify and Compress (HTML, CSS and JS files)
+Optimize content with HTML Elements like <h1> for headings.
+
+
+
+This is for main page :
+	<Helmet>
+		//-> Common Meta Tags (these can be defined in gatsby-config and imported using graphQL)
+		<title>Summit STEM</title>
+		<meta name="description" content="Education consulting for STEM Majors" />
+		<meta name="keywords" content="keyword1, keyword2, ..." />
+
+		//-> Open Graph Meta Tags for social media
+		<meta property="og:title" content="Summit STEM" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Education consulting for STEM Majors" />
+		<meta property="og:image" content="" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:url" content="https://www.summitstem.com" /> 
+		<link rel="canonical" href="https://www.summitstem.com" />
+	</Helmet>
+
+This is for blog posts :
+	<Helmet>
+		//-> Common Meta Tags (these can be defined in gatsby-config and imported using graphQL)
+		<title>{blog.title} | Summit STEM</title>
+		<meta name="description" content={blog.description} />
+		<meta name="keywords" content={blog.keywords} />
+
+		//-> Open Graph Meta Tags for social media
+		<meta property="og:title" content={blog.title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content={blog.description} />
+		<meta property="og:image" content="" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:url" content={`https://www.summitstem.com/blog/${blog.parmlink}`} /> 
+		<link rel="canonical" href={`https://www.summitstem.com/blog/${blog.parmlink}`} />
+	</Helmet>
+
+
+
+
+For Erika
+- Keyword Research
