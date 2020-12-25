@@ -11,7 +11,9 @@ const Footer = () => {
 			<p>Contact, follow and share us, anywhere.</p>
 			<div>
 				<button>
-					<FontAwesomeIcon icon={faLinkedinIn}/>
+					<FontAwesomeIcon icon={faLinkedinIn} 
+					// style={{margin: "auto"}}
+					/>
 				</button>
 				<button>
 					<FontAwesomeIcon icon={faFacebookSquare}/>
