@@ -44,6 +44,7 @@ const ContactMe = () => {
 			<CustomHR styles={{marginBottom: 15}}/>
 			
 			<h1>Contact Me</h1>
+			<h4>Schedule your complimentary consultation now.</h4>
 			
 			<div className={contactMeStyles.left}>
 				
