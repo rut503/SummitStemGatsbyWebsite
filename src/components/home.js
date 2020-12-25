@@ -29,7 +29,8 @@ const Home = () => {
 					community in STEM.
 				</h4>
 				<h4>
-					“When you follow the strange trails, they will take you who knows where” 
+					“When you follow the strange trails, they will take you who knows where”
+					<br/> 
 					– Lord Huron, Way Out There
 				</h4>
 				<AnchorLink to="/#ContactMe" title="Come talk with me">
