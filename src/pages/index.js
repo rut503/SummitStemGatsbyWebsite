@@ -13,6 +13,7 @@ const MainPage = ({ location }) => {
 	return (
 		<Layout>
 			<Helmet>
+				<meta name="ahrefs-site-verification" content="dbeb69b3fb4f7f612c937a4e977e075e8a920677858863eab111fc929b6bd314">
 				{/* -> Common Meta Tags (these can be defined in gatsby-config and imported using graphQL) */}
 				<title>Summit STEM</title>
 				<meta name="description" content="Education consulting for STEM Majors" />
